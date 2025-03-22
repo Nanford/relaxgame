@@ -30,6 +30,42 @@
             --apple-teal: #5AC8FA;
             --apple-yellow: #FFCC00;
         }
+        
+        /* Game iframe styles */
+        .game-iframe-container {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .game-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* Fullscreen button styles */
+        .fullscreen-btn {
+            display: block;
+            margin: 0 auto 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--apple-red);
+            color: white;
+            border: none;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .fullscreen-btn:hover {
+            background-color: rgba(255, 59, 48, 0.9);
+        }
     </style>
 </head>
 <body class="bg-apple-gray-100 text-apple-gray-900 font-sans">
@@ -80,8 +116,15 @@
         </div>
         
         <div class="game-iframe-container">
-            <iframe id="game-iframe" src="https://play.famobi.com/wrapper/giant-rush/A1000-10" webkit-playsinline="true" scrolling="no" frameborder="0" allow="autoplay" class="game-iframe" title="Giant Rush"></iframe>
+            <iframe src="https://play.famobi.com/wrapper/giant-rush/A1000-10?locale=en" class="game-iframe" allow="fullscreen" allowfullscreen title="Giant Rush"></iframe>
         </div>
+        
+        <button id="fullscreen-btn" class="fullscreen-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="display:inline-block; margin-right:5px;">
+                <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+            Fullscreen Mode
+        </button>
         
         <div class="game-description prose prose-lg max-w-none">
             <h2 class="text-2xl font-bold mb-4 text-apple-red">About Giant Rush</h2>
@@ -121,5 +164,19 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('fullscreen-btn').addEventListener('click', function() {
+            const iframe = document.querySelector('.game-iframe');
+            
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.webkitRequestFullscreen) { /* Safari */
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { /* IE11 */
+                iframe.msRequestFullscreen();
+            }
+        });
+    </script>
 </body>
 </html> 
