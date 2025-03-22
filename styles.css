@@ -94,6 +94,29 @@ body {
     color: #555;
 }
 
+/* Control the size of SVG icons in game metadata */
+.game-meta-item svg {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+}
+
+/* Control the size of all SVG icons */
+svg.h-5, 
+svg.w-5,
+svg.h-6,
+svg.w-6 {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+}
+
 /* Animation */
 @keyframes fadeIn {
     from { opacity: 0; }
