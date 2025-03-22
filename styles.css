@@ -137,4 +137,9 @@ svg.w-6 {
         flex-direction: column;
         gap: 0.5rem;
     }
+}
+
+/* Navigation */
+header nav a {
+    color: white !important;
 } 
