@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MTNE968MG7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MTNE968MG7');
+    </script>
+    <title>Rising Squares - RelaxGameClub</title>
+    <meta name="description" content="Play Rising Squares, a unique 2D sidescrolling adventure at RelaxGameClub where you protect a moving circle by stacking squares and dodging obstacles.">
+    <link rel="canonical" href="https://relaxgame.online/rising-squares.html">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tailwind.css">
+    <style>
+        /* Apple Color System Fallback */
+        :root {
+            --apple-blue: #007AFF;
+            --apple-green: #34C759;
+            --apple-indigo: #5856D6;
+            --apple-orange: #FF9500;
+            --apple-pink: #FF2D55;
+            --apple-purple: #AF52DE;
+            --apple-red: #FF3B30;
+            --apple-teal: #5AC8FA;
+            --apple-yellow: #FFCC00;
+        }
+        
+        /* Game iframe styles */
+        .game-iframe-container {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .game-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* Fullscreen button styles */
+        .fullscreen-btn {
+            display: block;
+            margin: 0 auto 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--apple-blue);
+            color: white;
+            border: none;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .fullscreen-btn:hover {
+            filter: brightness(110%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-apple-gray-100 text-apple-gray-900 font-sans">
+    <header class="bg-apple-blue text-white shadow-md">
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <a href="index.html" class="text-3xl font-bold">RelaxGameClub</a>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-apple-gray-200 transition-colors">Home</a></li>
+                    <li><a href="index.html#games" class="hover:text-apple-gray-200 transition-colors">Games</a></li>
+                    <li><a href="index.html#about" class="hover:text-apple-gray-200 transition-colors">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 animate-fadeIn">
+        <a href="index.html" class="back-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+            </svg>
+            Go Back to Games
+        </a>
+        
+        <h1 class="text-4xl font-bold mb-6 text-apple-blue">Rising Squares</h1>
+        
+        <div class="game-meta">
+            <div class="game-meta-item">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                </svg>
+                Category: Puzzle, Strategy
+            </div>
+            <div class="game-meta-item">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Game Time: 3-10 minutes
+            </div>
+            <div class="game-meta-item">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+                Difficulty: Medium to Hard
+            </div>
+        </div>
+        
+        <div class="game-iframe-container">
+            <iframe id="game-iframe" src="https://play.famobi.com/wrapper/rising-squares/A1000-10" webkit-playsinline="true" scrolling="no" frameborder="0" allow="autoplay" class="game-iframe" title="Rising Squares"></iframe>
+        </div>
+        
+        <button id="fullscreen-btn" class="fullscreen-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="display:inline-block; margin-right:5px;">
+                <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+            Fullscreen Mode
+        </button>
+        
+        <div class="game-description prose prose-lg max-w-none">
+            <h2 class="text-2xl font-bold mb-4 text-apple-blue">About Rising Squares</h2>
+            <p class="mb-4">Elevate and navigate in Rising Squares - the ultimate circle protection challenge! Rising Squares offers a unique twist on 2D sidescrolling adventure. In this game, you're tasked with protecting a moving circle. How? By strategically stacking squares beneath it. Each click elevates your circle, helping you dodge oncoming obstacles.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-6 text-apple-blue">How to Play</h2>
+            <p class="mb-3">1. Click to stack a square beneath your circle.</p>
+            <p class="mb-3">2. Time your stacks carefully to avoid obstacles.</p>
+            <p class="mb-3">3. Collect power-ups to gain shooting abilities.</p>
+            <p class="mb-3">4. Use shooting abilities to destroy obstacles, but be careful - it reduces your stack!</p>
+            <p class="mb-3">5. Balance stacking and shooting to achieve high scores.</p>
+            
+            <h2 class="text-2xl font-bold mb-4 mt-6 text-apple-blue">Features</h2>
+            <ul class="list-disc pl-6 mb-6">
+                <li>Unique gameplay mechanics combining stacking and shooting</li>
+                <li>Strategic decision-making between defense and offense</li>
+                <li>Progressive difficulty curve that tests your reflexes</li>
+                <li>Power-up system that adds depth to gameplay</li>
+                <li>Minimalist yet appealing visual design</li>
+                <li>Challenging levels that require both skill and strategy</li>
+            </ul>
+            
+            <p class="mt-6 text-lg font-medium">Can you master the art of stacking, shooting, and surviving in this exhilarating game? Get ready to stack, dodge, and shoot your way to high scores in Rising Squares - your ultimate test of agility and strategy!</p>
+        </div>
+    </main>
+
+    <footer class="bg-apple-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-xl font-bold">RelaxGameClub</h2>
+                    <p class="text-apple-gray-400">Your Ultimate Online Gaming Destination</p>
+                </div>
+                <div>
+                    <p class="text-apple-gray-400">&copy; 2023 RelaxGameClub. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('fullscreen-btn').addEventListener('click', function() {
+            const iframe = document.querySelector('.game-iframe');
+            
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.webkitRequestFullscreen) { /* Safari */
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { /* IE11 */
+                iframe.msRequestFullscreen();
+            }
+        });
+    </script>
+</body>
+</html> 
